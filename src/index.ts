@@ -6,6 +6,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { systemPrompt } from "./system-prompt";
 import { check_appointment_availability, delete_appointment, schedule_appointment } from "./tools";
 import { processLlmResponse } from "./response";
+import chalk from "chalk";
 
 // const client = new OpenAI({
 //   apiKey: process.env.OPENAI_API_KEY,
@@ -63,7 +64,7 @@ export async function sendToLlm(prompt: string) {
 async function main() {
     while (true) {
         const input: string  =  await new Promise((resolve) => {
-            rl.question("Say something: ", (answer) => {
+            rl.question(chalk.magentaBright("\nWhat would you like to do? "), (answer) => {
                 resolve(answer);
             });
         });
