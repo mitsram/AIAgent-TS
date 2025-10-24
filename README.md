@@ -17,7 +17,7 @@ ANTHROPIC_API_KEY=<your api key>
 Can you schedule an appointment for me for tomorrow at 10AM
 ```
 Output: 
-Should call `check_appointment_availability` and `check_appointment_availability` functions
+Should call `check_appointment_availability` and `schedule_appointment` functions
 
 #### Re-scheduling an appointment
 ```
